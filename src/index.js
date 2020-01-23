@@ -26,6 +26,15 @@ getMovies().then((movies) => {
     console.log(error);
 });
 
+
+window.onload = function () {
+    alert('Loading!....');
+};
+
+
+
+
+
 let createMovieString = (moviesObj) => {
     let htmlString = '';
 
@@ -46,7 +55,9 @@ $('#add').click(function () {
           $('#insertProducts').append(createMovieString(i));
         }
       })
-})
+});
+
+
 
 
 
