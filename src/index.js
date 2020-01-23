@@ -13,19 +13,23 @@ sayHello('World');
  */
 const {getMovies} = require('./api.js');
 
+
 getMovies().then((movies) => {
-  console.log('Here are all the movies:');
-  movies.forEach(({title, rating, id}) => {
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
-    $('#insertProducts').append(`<tr>
+    console.log('Here are all the movies:');
+    movies.forEach(({title, rating, id}) => {
+        console.log(`id#${id} - ${title} - rating: ${rating}`);
+        $('#insertProducts').append(`<tr>
                       <td scope="row"> ${title} </td>
                       <td> ${rating} </td>
                       </tr>`);
-  });
+    });
 }).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.');
-  console.log(error);
+    alert('Oh no! Something went wrong.\nCheck the console for details.');
+    console.log(error);
 });
+
+
+
 
 
 
