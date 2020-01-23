@@ -47,15 +47,30 @@ let createMovieString = (moviesObj) => {
     return htmlString;
 };
 
-$('#add').click(function () {
-  $('#insertProducts').empty();
-  let movies = $.get('../db.json')
-      .done(function (movie) {
-        for(let i=0; i<movie.length; i++){
-          $('#insertProducts').append(createMovieString(i));
-        }
-      })
-});
+$('#add').click(function (event) {
+  const newMovieTitle = $('#newMovie').val();
+  const newMovieRating = $('#selectRating').val();
+
+  $.ajax("/api/movies", {
+    type: "POST",
+    data: {
+      title: newMovieTitle,
+      rating: newMovieRating
+    }
+  })  });
+
+
+
+
+// $('#add').click(function () {
+//   $('#insertProducts').empty();
+//   let movies = $.get('../db.json')
+//       .done(function (movie) {
+//         for(let i=0; i<movie.length; i++){
+//           $('#insertProducts').append(createMovieString(i));
+//         }
+//       })
+// });
 
 
 
