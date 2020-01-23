@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
     <div class="container">
         <h1>Hello There!</h1>
         <p>To get started, edit <code>src/index.js</code>.</p>
+
+        <table id="products">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>id</th>
+            </tr>
+            </thead>
+            <tbody id="insertProducts"></tbody>
+        </table>
+        <button id="refresh">refresh</button>
+
     </div>
 
     <script src="./main.js"></script>
