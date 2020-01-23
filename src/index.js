@@ -16,17 +16,27 @@ const {getMovies} = require('./api.js');
 
 getMovies().then((movies) => {
     console.log('Here are all the movies:');
-    movies.forEach(({title, rating, id}) => {
-        console.log(`id#${id} - ${title} - rating: ${rating}`);
-        $('#insertProducts').append(`<tr>
-                      <td scope="row"> ${title} </td>
-                      <td> ${rating} </td>
-                      </tr>`);
-    });
+    movies.forEach((movie) => {
+        console.log(`id#${movie.id} - ${movie.title} - rating: ${movie.rating}`);
+        $('#insertProducts').html(createMovieString(movies));
+        Promise.resolve().then(r => 'success');
+    })
 }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
 });
+
+let createMovieString = (moviesObj) => {
+    let htmlString = '';
+
+    moviesObj.forEach((movie) => {
+        htmlString += `<tr>
+                      <td scope="row"> ${movie.title} </td>
+                      <td> ${movie.rating} </td>
+                      </tr>`;
+    });
+    return htmlString;
+};
 
 
 
