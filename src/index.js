@@ -38,8 +38,15 @@ let createMovieString = (moviesObj) => {
     return htmlString;
 };
 
-
-
+$('#add').click(function () {
+  $('#insertProducts').empty();
+  let movies = $.get('../db.json')
+      .done(function (movie) {
+        for(let i=0; i<movie.length; i++){
+          $('#insertProducts').append(createMovieString(i));
+        }
+      })
+})
 
 
 
