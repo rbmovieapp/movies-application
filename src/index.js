@@ -41,7 +41,7 @@ let createMovieString = (moviesObj) => {
     moviesObj.forEach((movie) => {
         htmlString += `<tr>
                       <td scope="row"> ${movie.title} </td>
-                      <td> ${movie.rating} </td>
+                      <td> ${movie.rating}/5</td>
                       </tr>`;
     });
     return htmlString;

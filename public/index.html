@@ -7,12 +7,13 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container"> <!-- container div start -->
+
         <h1>Movies Application!</h1>
 
-
-        <table id="products">
-            <thead>
+        <div id="table-parent">
+            <table id="products"> <!-- table start -->
+            <thead id="header">
             <tr>
                 <th>Title</th>
                 <th>Rating</th>
@@ -20,15 +21,20 @@
             </thead>
             <tbody id="insertProducts"></tbody>
 
+            </table> <!--- table end --->
+
+        </div>
 
 
-            <div class="form-group">
-                <form action="">
-                    <input type="text" name="addMovie" id="newMovie">
+        <div class="form-group">
+            <div id="search-box">
+                Add a movie to the list: <form action="">
+                    <input type="text" name="addMovie" id="newMovie" placeholder="enter movie title">
                 </form>
                 <button id="add" formmethod="post"><a href="">Submit</a></button>
+            </div>
 
-                <label for="selectRating">Rating</label>
+                <label for="selectRating">Rate this movie</label>
                 <select class="form-control" id="selectRating">
                     <option>1</option>
                     <option>2</option>
@@ -39,9 +45,9 @@
             </div>
 
 
-        </table>
 
-    </div>
+
+    </div>  <!-- container end div -->
 
     <script src="./main.js"></script>
 </body>
