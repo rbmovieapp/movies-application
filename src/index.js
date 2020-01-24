@@ -88,36 +88,3 @@ $('#add').click(function (event) {
 //   alert('Oh no! Something went wrong.\nCheck the console for details.')
 //   console.log(error);
 // });
-
-// -------------------------------------------------------------------------------
-
-    //
-    // (function() {
-    //   "use strict";
-    //   $(document).ready(function () {
-    //
-    //     function tableLoad (){
-    //         $.ajax('../db.json')
-    //             .done(function (movies) {
-    //                 for (let i=0; i<movies.length; i++) {
-    //                     $('#insertMovies').append
-    //                     (
-    //                         "<tr><td>" + movies[i].title +
-    //                         "</td><td>" + movies[i].rating +
-    //                         "</td><td>" + movies[i].id +
-    //                         "</td></tr>"
-    //                     )
-    //                 } //for loop close //
-    //             }) //.done function close//
-    //     } // tableLoad function close //
-    //
-    //       tableLoad()
-    //       $('#refresh').click(function (){
-    //           $('#insertMovies').empty();
-    //           tableLoad()
-    //       }) // refresh close //
-    //
-    //   });  // document ready close //
-    //
-    // })(); // iffe close //
-
