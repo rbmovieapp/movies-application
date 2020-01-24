@@ -9,48 +9,46 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <div class="row d-flex justify-content-center">
-
-
+    <div class="row d-flex justify-content-center"> <!---div row start for header -->
         <h1 class="col-9 d-flex justify-content-center shadow-lg p-3 mb-5 bg-white rounded">Motion Pictures</h1>
 <!--        <h1 class="col-3 d-flex justify-content-center">Test</h1>-->
-
-    </div>
-
+    </div> <!-- div row end for header --->
 
     <div class="container"> <!-- container div start -->
-        <div id="table-parent">
-            <table id="products col-7 d-flex justify-content-center"> <!-- table start -->
-            <thead id="header col-5 d-flex justify-content-center">
+
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th class="headers">Title</th>
-                <th class="headers">Rating</th>
+                <th scope="col">Title</th>
+                <th scope="col">Rating</th>
             </tr>
             </thead>
             <tbody id="insertProducts"></tbody>
-
-            </table> <!--- table end --->
-
-        </div>
+        </table>
 
 
-        <div class="form-group">
+        <div class="form-group row mt-4">
             <div id="search-box">
-                <h6 class="col-3 d-flex justify-content-center shadow-lg p-3 mb-5 bg-gray rounded">Add a movie to the list: <form action=""></h6>
-<!--                Add a movie to the list: <form action="">-->
-                    <input type="text" name="addMovie" id="newMovie" placeholder="enter movie title">
-                </form>
-                <button id="add" formmethod="post"><a href="">Submit</a></button>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="enter movie title" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+
+                        <label for="selectRating"></label>
+                        <select class="form-control col-md-8 ml-2" id="selectRating">
+                            <option class="selected">rating</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button id="add" class="btn btn-outline-secondary" type="button">Submit</button>
+                    </div>
+                </div>
+
             </div>
 
-                <label for="selectRating">Rate this movie</label>
-                <select class="form-control" id="selectRating">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
             </div>
 
 

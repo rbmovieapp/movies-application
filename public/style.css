@@ -6,7 +6,7 @@ body {
     background: mediumpurple;
     color: white;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     background-image: linear-gradient(135deg, mediumpurple, lightblue);
 }
 
@@ -21,6 +21,6 @@ body {
 }
 
 
-#newMovie {
-    font-family: 'Oswald', cursive;
-}
+/*#newMovie {*/
+/*    font-family: 'Oswald', cursive;*/
+/*}*/
